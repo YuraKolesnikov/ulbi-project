@@ -1,10 +1,10 @@
 import { Suspense } from 'react'
 import { Route, Routes, Link } from 'react-router-dom'
 
-import HomePageAsync from './pages/HomePage/HomePage.lazy'
-import AboutPageAsync from './pages/AboutPage/AboutPage.lazy'
+import { HomePage } from 'pages/HomePage'
+import { AboutPage } from 'pages/AboutPage'
 
-import { useTheme } from './pages/theme/useTheme'
+import { useTheme } from './providers/ThemeProvider'
 
 import './scss/index.scss'
 
@@ -18,8 +18,8 @@ const App = () => {
       <button onClick={toggleTheme}>Toggle theme</button>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path='/' element={<HomePageAsync />} />
-          <Route path='/about' element={<AboutPageAsync />} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
         </Routes>
       </Suspense>
     </main>
