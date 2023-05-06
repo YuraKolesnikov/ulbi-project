@@ -1,3 +1,6 @@
+import { Suspense } from 'react'
+import { useTranslation } from 'react-i18next'
+
 import { Navbar } from 'widgets/Navbar'
 
 import { Sidebar } from 'widgets/Sidebar'
@@ -12,13 +15,15 @@ const App = () => {
 
   return (
     <main className={`app ${theme}`}>
-      <Navbar />
-      <main className='main'>
-        <Sidebar />
-        <div className='content'>
-          <AppRouter />
-        </div>
-      </main>
+      <Suspense fallback=''>
+        <Navbar />
+        <main className='main'>
+          <Sidebar />
+          <div className='content'>
+            <AppRouter />
+          </div>
+        </main>
+      </Suspense>
     </main>
   )
 }

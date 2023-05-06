@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import { useTheme } from 'app/providers/ThemeProvider'
 
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
@@ -11,6 +13,7 @@ interface INavbarProps {
 
 export const Navbar = ({}: INavbarProps) => {
   const { theme } = useTheme()
+  const { t } = useTranslation()
 
   return (
     <nav className={css.navbar}>
@@ -24,7 +27,7 @@ export const Navbar = ({}: INavbarProps) => {
                 : AppLinkTheme.PRIMARY
             }
           >
-            Home
+            {t('Navbar.home')}
           </AppLink>
         </li>
         <li>
@@ -36,7 +39,7 @@ export const Navbar = ({}: INavbarProps) => {
                 : AppLinkTheme.PRIMARY
             }
           >
-            About
+            {t('Navbar.about')}
           </AppLink>
         </li>
       </ul>

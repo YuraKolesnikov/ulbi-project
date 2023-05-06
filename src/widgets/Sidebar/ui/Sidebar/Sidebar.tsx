@@ -2,6 +2,7 @@ import { FC, useCallback, useState } from 'react'
 import classNames from 'classnames'
 
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
+import { LangSwitcher } from 'widgets/LangSwitcher'
 
 import css from './Sidebar.module.scss'
 
@@ -27,6 +28,7 @@ export const Sidebar: FC<ISidebarProps> = ({ className }) => {
       <button onClick={onToggle}>Toggle sidebar</button>
       <div className={css.controls}>
         <ThemeSwitcher />
+        <LangSwitcher className={css.rightControl} />
       </div>
     </aside>
   )
