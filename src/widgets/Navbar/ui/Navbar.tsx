@@ -1,17 +1,17 @@
 import { useTheme } from 'app/providers/ThemeProvider'
 
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
-import { Theme } from 'app/providers/ThemeProvider/lib/ThemeContext'
+import { Theme } from 'app/providers/ThemeProvider'
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 
 import css from './Navbar.module.scss'
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 
 interface INavbarProps {
   className?: string
 }
 
 export const Navbar = ({}: INavbarProps) => {
-  const { theme, toggleTheme } = useTheme()
+  const { theme } = useTheme()
 
   return (
     <nav className={css.navbar}>
