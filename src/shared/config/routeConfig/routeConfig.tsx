@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router-dom'
 
 import { HomePage } from 'pages/HomePage'
 import { AboutPage } from 'pages/AboutPage'
+import { NotFoundPage } from 'pages/NotFoundPage'
 
 interface IRouteInterface {
   path: string
@@ -17,6 +18,10 @@ export const RouterView = (): ReactElement | null => {
       {
         path: '/about',
         element: <AboutPage />
+      },
+      {
+        path: '*',
+        element: <NotFoundPage />
       }
     ],
     []
