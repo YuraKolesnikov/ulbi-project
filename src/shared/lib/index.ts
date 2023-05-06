@@ -1,3 +1,3 @@
-import { capitalize } from './string/string';
+import { capitalize } from './string/string'
 
 export { capitalize }
