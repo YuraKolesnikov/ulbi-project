@@ -1,25 +1,28 @@
-import { RouteProps } from 'react-router-dom'
+import { ReactNode } from 'react'
+import { useRoutes } from 'react-router-dom'
 
 import { HomePage } from 'pages/HomePage'
 import { AboutPage } from 'pages/AboutPage'
+import { useMemo } from 'react'
 
-export enum AppRoutes {
-  HOME = 'home',
-  ABOUT = 'about',
+interface IRouteInterface {
+  path: string
+  element: ReactNode
+  children?: IRouteInterface[]
 }
 
-export const RoutePath: Record<AppRoutes, string> = {
-  [AppRoutes.HOME]: '/',
-  [AppRoutes.ABOUT]: '/about',
-}
+export const RouterView = () => {
+  const ROUTES: IRouteInterface[] = useMemo(
+    () => [
+      { path: '/', element: <HomePage /> },
+      {
+        path: '/about',
+        element: <AboutPage />,
+      },
+    ],
+    []
+  )
 
-export const routeConfig: Record<AppRoutes, RouteProps> = {
-  [AppRoutes.HOME]: {
-    path: RoutePath.home,
-    element: <HomePage />,
-  },
-  [AppRoutes.ABOUT]: {
-    path: RoutePath.about,
-    element: <AboutPage />,
-  },
+  const currentView = useRoutes(ROUTES)
+  return currentView
 }
