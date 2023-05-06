@@ -1,11 +1,12 @@
 import path from 'path'
 import webpack from 'webpack'
+import detect from 'detect-port'
 
 import { buildWebpackConfig } from './config/build/buildWebpackConfig'
 
 import { BuildPaths, BuildEnv } from './config/build/types/config'
 
-export default (env: BuildEnv) => {
+export default async (env: BuildEnv) => {
   const paths: BuildPaths = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     build: path.resolve(__dirname, 'build'),
@@ -14,14 +15,21 @@ export default (env: BuildEnv) => {
   }
 
   const mode = env.mode || 'development',
-    PORT = env.port || 3000,
     isDev = mode === 'development'
+
+  const availablePort = await detect(+env.port)
+
+  if (+env.port !== availablePort) {
+    console.log(
+      `Port ${env.port} is already in use. Trying ${availablePort}...`
+    )
+  }
 
   const config: webpack.Configuration = buildWebpackConfig({
     mode,
     paths,
     isDev,
-    port: PORT,
+    port: availablePort,
   })
 
   return config
