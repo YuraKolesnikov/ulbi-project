@@ -1,0 +1,19 @@
+.navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: var(--inverted-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+
+  & > li:not(:first-child) {
+    margin-left: 10px;
+  }
+}
