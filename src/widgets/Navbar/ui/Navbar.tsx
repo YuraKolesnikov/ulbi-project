@@ -1,3 +1,4 @@
+import { type ReactElement } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { useTheme, Theme } from 'app/providers/ThemeProvider'
@@ -10,7 +11,7 @@ interface INavbarProps {
   className?: string
 }
 
-export const Navbar = ({}: INavbarProps) => {
+export const Navbar = ({ className }: INavbarProps): ReactElement => {
   const { theme } = useTheme()
   const { t } = useTranslation()
 

@@ -5,24 +5,32 @@ import classNames from 'classnames'
 import css from './Button.module.scss'
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  buttonType: ButtonType
+  ButtonDesign: ButtonDesign
+  type?: ButtonType
   className?: string
   children: ReactNode
 }
 
-export enum ButtonType {
+export enum ButtonDesign {
   CLEAR = 'clear',
 }
 
+export enum ButtonType {
+  BUTTON = 'button',
+  SUBMIT = 'submit',
+  RESET = 'reset',
+}
+
 export const Button: FC<IButtonProps> = ({
-  buttonType,
+  type = ButtonType.BUTTON,
+  ButtonDesign,
   className,
   children,
   ...otherProps
 }) => {
   return (
     <button
-      className={classNames(css.Button, css[buttonType], className)}
+      className={classNames(css.Button, css[ButtonDesign], className)}
       {...otherProps}
     >
       {children}

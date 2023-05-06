@@ -15,8 +15,10 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'comma-dangle': ['error', 'only-multiline'],
+    'no-underscore-dangle': 'off',
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/space-before-function-paren': 0,
+    '@typescript-eslint/no-floating-promises': 0,
   },
   settings: {
     react: {

@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { type ReactElement, Suspense } from 'react'
 
 import { Navbar } from 'widgets/Navbar'
 
@@ -9,7 +9,7 @@ import { useTheme } from './providers/ThemeProvider'
 
 import './scss/index.scss'
 
-const App = () => {
+const App = (): ReactElement => {
   const { theme } = useTheme()
 
   return (

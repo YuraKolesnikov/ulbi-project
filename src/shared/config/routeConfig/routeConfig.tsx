@@ -1,4 +1,4 @@
-import { type ReactNode, useMemo } from 'react'
+import { type ReactNode, useMemo, type ReactElement } from 'react'
 import { useRoutes } from 'react-router-dom'
 
 import { HomePage } from 'pages/HomePage'
@@ -10,7 +10,7 @@ interface IRouteInterface {
   children?: IRouteInterface[]
 }
 
-export const RouterView = () => {
+export const RouterView = (): ReactElement | null => {
   const ROUTES: IRouteInterface[] = useMemo(
     () => [
       { path: '/', element: <HomePage /> },
