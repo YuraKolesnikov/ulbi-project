@@ -4,6 +4,7 @@ import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import { Theme } from 'app/providers/ThemeProvider/lib/ThemeContext'
 
 import css from './Navbar.module.scss'
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 
 interface INavbarProps {
   className?: string
@@ -40,7 +41,7 @@ export const Navbar = ({}: INavbarProps) => {
           </AppLink>
         </li>
       </ul>
-      <button onClick={toggleTheme}>Toggle theme</button>
+      <ThemeSwitcher className={css.themeSwitcher} />
     </nav>
   )
 }
