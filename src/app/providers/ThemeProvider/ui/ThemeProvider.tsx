@@ -6,7 +6,9 @@ import {
 } from '../lib/ThemeContext'
 
 const defaultTheme: Theme =
+  /* eslint-disable @typescript-eslint/strict-boolean-expressions */
   (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGHT
+  /* eslint-enable */
 
 const ThemeProvider: FC = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(defaultTheme)

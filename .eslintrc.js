@@ -17,6 +17,8 @@ module.exports = {
   rules: {
     'comma-dangle': ['error', 'only-multiline'],
     'no-underscore-dangle': 'off',
+    'quotes': ['error', 'single', { allowTemplateLiterals: true }],
+    'object-curly-spacing': ['error', 'always'],
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/space-before-function-paren': 0,
     '@typescript-eslint/no-floating-promises': 0,
