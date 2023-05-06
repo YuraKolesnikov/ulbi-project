@@ -1,4 +1,4 @@
-import { FC, useMemo } from 'react'
+import { type FC, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { Button, ButtonType } from 'shared/ui/Button'
@@ -15,7 +15,7 @@ export const LangSwitcher: FC<ILangSwitcherProps> = ({ className }) => {
     [i18n.language]
   )
 
-  const toggleLang = () => i18n.changeLanguage(oppositeLang)
+  const toggleLang = async () => await i18n.changeLanguage(oppositeLang)
 
   return (
     <Button

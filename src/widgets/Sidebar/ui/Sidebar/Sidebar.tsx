@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react'
+import { type FC, useCallback, useState } from 'react'
 import classNames from 'classnames'
 
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'

@@ -1,23 +1,23 @@
 import path from 'path'
-import webpack from 'webpack'
+import type webpack from 'webpack'
 import detect from 'detect-port'
 
 import { buildWebpackConfig } from './config/build/buildWebpackConfig'
 
-import { BuildPaths, BuildEnv } from './config/build/types/config'
+import { type BuildPaths, type BuildEnv, type BuildMode } from './config/build/types/config'
 
 export default async (env: BuildEnv) => {
   const paths: BuildPaths = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     build: path.resolve(__dirname, 'build'),
     html: path.resolve(__dirname, 'public', 'index.html'),
-    src: path.resolve(__dirname, 'src'),
+    src: path.resolve(__dirname, 'src')
   }
 
-  const mode = env.mode || 'development',
-    isDev = mode === 'development'
+  const mode: BuildMode = env.mode || 'development'
+  const isDev: boolean = mode === 'development'
 
-  const availablePort = await detect(+env.port)
+  const availablePort: number = await detect(+env.port)
 
   if (+env.port !== availablePort) {
     console.log(
@@ -29,7 +29,7 @@ export default async (env: BuildEnv) => {
     mode,
     paths,
     isDev,
-    port: availablePort,
+    port: availablePort
   })
 
   return config

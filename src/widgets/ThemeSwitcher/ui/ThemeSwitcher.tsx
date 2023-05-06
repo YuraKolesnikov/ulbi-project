@@ -1,8 +1,7 @@
-import { ButtonHTMLAttributes, FC } from 'react'
+import { type FC, type ButtonHTMLAttributes } from 'react'
 import classNames from 'classnames'
 
-import { useTheme } from 'app/providers/ThemeProvider'
-import { Theme } from 'app/providers/ThemeProvider'
+import { useTheme, Theme } from 'app/providers/ThemeProvider'
 
 import LightIcon from 'shared/assets/icons/theme-light.svg'
 import DarkIcon from 'shared/assets/icons/theme-dark.svg'

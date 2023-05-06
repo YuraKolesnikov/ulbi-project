@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import {
   LOCAL_STORAGE_THEME_KEY,
   Theme,
-  ThemeContext,
+  ThemeContext
 } from '../lib/ThemeContext'
 
 interface IUseThemeResult {
@@ -22,6 +22,6 @@ export function useTheme(): IUseThemeResult {
 
   return {
     theme,
-    toggleTheme,
+    toggleTheme
   }
 }

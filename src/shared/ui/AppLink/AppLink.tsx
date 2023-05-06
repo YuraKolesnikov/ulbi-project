@@ -1,6 +1,6 @@
 import classNames from 'classnames'
-import { FC, ReactNode } from 'react'
-import { Link, LinkProps } from 'react-router-dom'
+import { type FC, type ReactNode } from 'react'
+import { Link, type LinkProps } from 'react-router-dom'
 
 import css from './AppLink.module.scss'
 
@@ -20,7 +20,7 @@ export const AppLink: FC<IAppLinkProps> = ({
   to,
   children,
   theme = AppLinkTheme.PRIMARY,
-  className,
+  className
 }) => {
   return (
     <Link className={classNames(css.link, css[theme], className)} to={to}>

@@ -1,5 +1,4 @@
 import { Suspense } from 'react'
-import { useTranslation } from 'react-i18next'
 
 import { Navbar } from 'widgets/Navbar'
 

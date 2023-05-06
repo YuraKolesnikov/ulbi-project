@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FC, ReactNode } from 'react'
+import type { FC, ButtonHTMLAttributes, ReactNode } from 'react'
 
 import classNames from 'classnames'
 

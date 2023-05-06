@@ -1,9 +1,8 @@
-import { ReactNode } from 'react'
+import { type ReactNode, useMemo } from 'react'
 import { useRoutes } from 'react-router-dom'
 
 import { HomePage } from 'pages/HomePage'
 import { AboutPage } from 'pages/AboutPage'
-import { useMemo } from 'react'
 
 interface IRouteInterface {
   path: string
@@ -17,8 +16,8 @@ export const RouterView = () => {
       { path: '/', element: <HomePage /> },
       {
         path: '/about',
-        element: <AboutPage />,
-      },
+        element: <AboutPage />
+      }
     ],
     []
   )
