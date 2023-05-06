@@ -1,6 +1,8 @@
 import { FC, useCallback, useState } from 'react'
 import classNames from 'classnames'
 
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
+
 import css from './Sidebar.module.scss'
 
 interface ISidebarProps {
@@ -23,6 +25,9 @@ export const Sidebar: FC<ISidebarProps> = ({ className }) => {
       )}
     >
       <button onClick={onToggle}>Toggle sidebar</button>
+      <div className={css.controls}>
+        <ThemeSwitcher />
+      </div>
     </aside>
   )
 }
