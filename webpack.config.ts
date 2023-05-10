@@ -2,7 +2,7 @@ import path from 'path'
 import type webpack from 'webpack'
 import detect from 'detect-port'
 
-import { buildWebpackConfig } from './config/build/buildWebpackConfig'
+import { buildWebpackConfig } from './config/build/build-webpack-config'
 
 import { type BuildPaths, type BuildEnv, type BuildMode } from './config/build/types/config'
 
