@@ -1,7 +1,7 @@
 import { type FC, useMemo, type ReactElement } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { Button, ButtonDesign } from 'button'
+import { Button, ButtonDesign } from 'shared/ui/button'
 
 interface ILangSwitcherProps {
   className?: string

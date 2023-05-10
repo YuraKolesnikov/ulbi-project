@@ -1,8 +1,8 @@
 import { type ReactElement, Suspense } from 'react'
 
-import { Navbar } from 'widgets/Navbar'
+import { Navbar } from 'widgets/navbar'
 
-import { Sidebar } from 'widgets/Sidebar'
+import { Sidebar } from 'widgets/sidebar'
 
 import { AppRouter } from './providers/router'
 import { useTheme } from './providers/theme-provider'

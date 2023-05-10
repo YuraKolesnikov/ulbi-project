@@ -1,9 +1,9 @@
 import { type ReactElement } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { useTheme, Theme } from 'theme-provider'
+import { useTheme, Theme } from 'app/providers/theme-provider'
 
-import { AppLink, AppLinkTheme } from 'app-link.tsx'
+import { AppLink, AppLinkTheme } from 'shared/ui/app-link/app-link'
 
 import css from './navbar.module.scss'
 

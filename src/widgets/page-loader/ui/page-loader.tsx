@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 
-import { Loader } from 'loader'
+import { Loader } from 'shared/ui/loader'
 
 import css from './page-loader.module.scss'
 

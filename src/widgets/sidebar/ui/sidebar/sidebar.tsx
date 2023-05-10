@@ -1,8 +1,8 @@
 import { type FC, useCallback, useState } from 'react'
 import classNames from 'classnames'
 
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
-import { LangSwitcher } from 'lang-switcher'
+import { ThemeSwitcher } from 'widgets/theme-switcher'
+import { LangSwitcher } from 'widgets/lang-switcher'
 
 import css from './sidebar.module.scss'
 

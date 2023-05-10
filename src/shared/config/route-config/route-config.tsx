@@ -1,9 +1,9 @@
 import { type ReactNode, useMemo, type ReactElement } from 'react'
 import { useRoutes } from 'react-router-dom'
 
-import { HomePage } from 'home-page'
-import { AboutPage } from 'about-page'
-import { NotFoundPage } from 'not-found-page'
+import { HomePage } from 'pages/home-page'
+import { AboutPage } from 'pages/about-page'
+import { NotFoundPage } from 'pages/not-found-page'
 
 interface IRouteInterface {
   path: string
