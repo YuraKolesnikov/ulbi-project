@@ -22,6 +22,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/space-before-function-paren': 0,
     '@typescript-eslint/no-floating-promises': 0,
+    'no-tabs': 'off'
   },
   settings: {
     react: {

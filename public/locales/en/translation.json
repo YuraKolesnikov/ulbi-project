@@ -4,5 +4,6 @@
   "Navbar.home": "Home",
   "Navbar.about": "About",
   "lang.ru": "Russian",
-  "lang.en": "English"
+  "lang.en": "English",
+  "error": "Oops! Something went wrong"
 }
