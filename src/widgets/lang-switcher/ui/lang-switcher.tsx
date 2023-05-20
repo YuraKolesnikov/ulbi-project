@@ -22,7 +22,7 @@ export const LangSwitcher: FC<ILangSwitcherProps> = ({ className }): ReactElemen
   return (
     <Button
       className={className}
-      ButtonDesign={ButtonDesign.CLEAR}
+      design={ButtonDesign.CLEAR}
       onClick={toggleLang}
     >
       {t(`lang.${oppositeLang}`)}

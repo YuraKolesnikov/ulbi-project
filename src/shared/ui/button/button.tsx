@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import css from './button.module.scss'
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  ButtonDesign: ButtonDesign
+  design?: ButtonDesign
   type?: ButtonType
   className?: string
   children: ReactNode
@@ -23,14 +23,14 @@ export enum ButtonType {
 
 export const Button: FC<IButtonProps> = ({
   type = ButtonType.BUTTON,
-  ButtonDesign,
+  design = ButtonDesign.CLEAR,
   className,
   children,
   ...otherProps
 }) => {
   return (
     <button
-      className={classNames(css.Button, css[ButtonDesign], className)}
+      className={classNames(css.Button, css[design], className)}
       {...otherProps}
     >
       {children}

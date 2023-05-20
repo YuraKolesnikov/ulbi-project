@@ -15,7 +15,7 @@ export const PageError: FC = (): ReactElement => {
   return (
 		<div className={css.container}>
 			<p className={css.error}>{t('error')}</p>
-			<Button ButtonDesign={ButtonDesign.CLEAR} onClick={reload}>Reload</Button>
+			<Button design={ButtonDesign.CLEAR} onClick={reload}>Reload</Button>
 		</div>
   )
 }

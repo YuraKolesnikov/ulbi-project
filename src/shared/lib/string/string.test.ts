@@ -1,4 +1,4 @@
-import { capitalize } from './string'
+import { capitalize } from 'shared/lib'
 
 describe('capitalize', () => {
   test('default', () => {

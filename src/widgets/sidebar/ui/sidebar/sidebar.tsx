@@ -4,6 +4,8 @@ import classNames from 'classnames'
 import { ThemeSwitcher } from 'widgets/theme-switcher'
 import { LangSwitcher } from 'widgets/lang-switcher'
 
+import { Button } from 'shared/ui/button'
+
 import css from './sidebar.module.scss'
 
 interface ISidebarProps {
@@ -19,13 +21,14 @@ export const Sidebar: FC<ISidebarProps> = ({ className }) => {
 
   return (
     <aside
+      data-testid="sidebar"
       className={classNames(
         css.Sidebar,
         isCollapsed && css.collapsed,
         className
       )}
     >
-      <button onClick={onToggle}>Toggle sidebar</button>
+      <Button data-testid="sidebar-toggle" onClick={onToggle}>Toggle sidebar</Button>
       <div className={css.controls}>
         <ThemeSwitcher />
         <LangSwitcher className={css.rightControl} />
