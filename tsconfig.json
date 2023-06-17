@@ -1,25 +1,19 @@
 {
-	"compilerOptions": {
+  "compilerOptions": {
     "baseUrl": ".",
-    "paths": {
-      "*": ["./src/*"]
-    },
     "outDir": "./build/",
-    "sourceMap": true,
     "noImplicitAny": true,
-    "module": "ESNext",
+    "module": "es6",
     "target": "es5",
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  },
-  "include": ["./config/jest/setup-tests.ts"]
+  }
 }

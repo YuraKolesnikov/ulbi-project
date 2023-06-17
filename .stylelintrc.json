@@ -2,7 +2,9 @@
   "extends": "stylelint-config-standard-scss",
   "rules": {
     "string-quotes": "double",
-    "indentation": [2],
+    "indentation": [
+      2
+    ],
     "selector-class-pattern": null
   }
 }
