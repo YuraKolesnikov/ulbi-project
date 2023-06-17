@@ -1,8 +1,15 @@
 import { render } from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 
-import css from './index.module.scss'
+import { ThemeProvider } from './theme/theme-provider'
+
+import App from './app'
 
 render(
-  <div className={css.yeet}>Hello world</div>,
+  <BrowserRouter>
+    <ThemeProvider>
+      <App/>
+    </ThemeProvider>
+  </BrowserRouter>,
   document.getElementById('app'),
 )
