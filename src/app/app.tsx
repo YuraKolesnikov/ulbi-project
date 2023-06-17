@@ -1,10 +1,10 @@
 import { Suspense } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 
-import { HomePage } from './pages/home/home.lazy'
-import { AboutPage } from './pages/about/about.lazy'
+import { HomePage } from 'pages/home'
+import { AboutPage } from 'pages/about'
 
-import { useTheme } from './theme/use-theme'
+import { useTheme } from './providers/theme-provider/lib/use-theme'
 
 import './styles/index.scss'
 

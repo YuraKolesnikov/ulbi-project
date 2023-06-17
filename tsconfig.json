@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    },
     "outDir": "./build/",
     "noImplicitAny": true,
     "module": "ESNext",
