@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FC } from 'react'
+import { type ButtonHTMLAttributes, type FC } from 'react'
 import classNames from 'classnames'
 
 import css from './button.module.scss'

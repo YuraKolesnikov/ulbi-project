@@ -23,6 +23,7 @@ module.exports = {
 		'@typescript-eslint/space-before-function-paren': 0,
 		'@typescript-eslint/no-floating-promises': 0,
 		'no-tabs': 'off',
+		'arrow-body-style': ['error', 'as-needed'],
 	},
 	settings: {
 		react: {

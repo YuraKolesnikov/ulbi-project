@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { AppLink } from 'shared/ui'
@@ -6,7 +6,7 @@ import { LangSwitcher, ThemeSwitcher } from 'widgets'
 
 import css from './navbar.module.scss'
 
-export const Navbar = () => {
+export const Navbar: FC = () => {
   const { t } = useTranslation()
 
   return (

@@ -1,6 +1,6 @@
-import webpack from 'webpack'
+import type webpack from 'webpack'
 
-import { BuildOptions } from './types/config'
+import { type BuildOptions } from './types/config'
 import { buildPlugins } from './build-plugins'
 import { buildLoaders } from './build-loaders'
 import { buildResolvers } from './build-resolvers'
@@ -15,14 +15,14 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
     output: {
       filename: '[name].[contenthash].js',
       path: paths.build,
-      clean: true,
+      clean: true
     },
     plugins: buildPlugins(options),
     module: {
-      rules: buildLoaders(options),
+      rules: buildLoaders(options)
     },
     resolve: buildResolvers(options),
     devtool: isDev ? 'inline-source-map' : undefined,
-    devServer: isDev ? buildDevServer(options) : undefined,
+    devServer: isDev ? buildDevServer(options) : undefined
   }
 }

@@ -1,15 +1,11 @@
-import { FC, useState } from 'react'
+import { type FC, useState } from 'react'
 import classNames from 'classnames'
 
 import { Button } from 'shared/ui'
 
 import css from './sidebar.module.scss'
 
-interface SidebarProps {
-
-}
-
-export const Sidebar: FC<SidebarProps> = ({}) => {
+export const Sidebar: FC = () => {
   const [collapsed, setCollapsed] = useState(false)
 
   const onToggle = () => setCollapsed(prev => !prev)

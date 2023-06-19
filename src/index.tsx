@@ -13,5 +13,5 @@ render(
       <App/>
     </ThemeProvider>
   </BrowserRouter>,
-  document.getElementById('app'),
+  document.getElementById('app')
 )

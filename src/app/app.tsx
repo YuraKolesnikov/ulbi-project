@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { type FC, Suspense } from 'react'
 
 import { AppRouter } from 'app/providers/router-provider'
 import { Navbar, Sidebar } from 'widgets'
@@ -7,7 +7,7 @@ import { useTheme } from './providers/theme-provider'
 
 import './styles/index.scss'
 
-const App = () => {
+const App: FC = () => {
   const { theme } = useTheme()
 
   return (
