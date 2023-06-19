@@ -1,14 +1,17 @@
 import React, { FC } from 'react'
 
-import { useTheme } from 'app/providers/theme-provider'
+import { Theme, useTheme } from 'app/providers/theme-provider'
+import { Button } from 'shared/ui'
 
 import css from './theme-switcher.module.scss'
 
-interface ThemeSwitcherProps {
-
-}
-
-export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({}) => {
-  const { toggleTheme } = useTheme()
-  return <button className={css.ThemeSwitcher} onClick={toggleTheme}>Toggle theme</button>
+export const ThemeSwitcher: FC = ({}) => {
+  const { theme, toggleTheme } = useTheme()
+  return (
+    <Button
+      className={css.ThemeSwitcher}
+      onClick={toggleTheme}>
+      {theme === Theme.LIGHT ? 'Dark' : 'Light'} theme
+    </Button>
+  )
 }

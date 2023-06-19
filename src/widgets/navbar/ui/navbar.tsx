@@ -1,19 +1,16 @@
-import React from 'react';
-import { AppLink } from 'shared/ui/app-link'
+import React from 'react'
 
-import css from './navbar.module.scss'
+import { AppLink } from 'shared/ui'
 import { ThemeSwitcher } from 'widgets'
 
-export const Navbar = () => {
+import css from './navbar.module.scss'
 
-
-  return (
-    <nav className={css.navbar}>
-      <div className={css.links}>
-        <AppLink to={'/'}>Home</AppLink>
-        <AppLink to={'/about'}>About</AppLink>
-      </div>
-      <ThemeSwitcher/>
-    </nav>
-  );
-};
+export const Navbar = () => (
+  <nav className={css.navbar}>
+    <div className={css.links}>
+      <AppLink to={'/'}>Home</AppLink>
+      <AppLink to={'/about'}>About</AppLink>
+    </div>
+    <ThemeSwitcher/>
+  </nav>
+)
