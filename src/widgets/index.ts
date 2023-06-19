@@ -1,4 +1,5 @@
 import { Navbar } from './navbar'
+import { Sidebar } from './sidebar'
 import { ThemeSwitcher } from './theme-switcher'
 
-export { Navbar, ThemeSwitcher }
+export { Navbar, Sidebar, ThemeSwitcher }
