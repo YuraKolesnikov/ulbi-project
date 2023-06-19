@@ -16,7 +16,7 @@ export const Sidebar: FC<SidebarProps> = ({}) => {
 
   return (
     <aside className={classNames(css.sidebar, collapsed && css.collapsed)}>
-      <Button onClick={onToggle}>Toggle</Button>
+      <Button onClick={onToggle}>{collapsed ? '>' : '<'}</Button>
     </aside>
   )
 }

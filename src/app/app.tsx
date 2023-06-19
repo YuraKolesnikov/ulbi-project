@@ -1,3 +1,5 @@
+import { Suspense } from 'react'
+
 import { AppRouter } from 'app/providers/router-provider'
 import { Navbar, Sidebar } from 'widgets'
 
@@ -10,11 +12,13 @@ const App = () => {
 
   return (
     <div className={`app ${theme}`}>
-      <Navbar/>
-      <div className="content-page">
-        <Sidebar/>
-        <AppRouter/>
-      </div>
+      <Suspense fallback="">
+        <Navbar/>
+        <div className="content-page">
+          <Sidebar/>
+          <AppRouter/>
+        </div>
+      </Suspense>
     </div>
   )
 }

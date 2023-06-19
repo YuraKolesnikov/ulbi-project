@@ -1,16 +1,26 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { AppLink } from 'shared/ui'
-import { ThemeSwitcher } from 'widgets'
+import { LangSwitcher, ThemeSwitcher } from 'widgets'
 
 import css from './navbar.module.scss'
 
-export const Navbar = () => (
-  <nav className={css.navbar}>
-    <div className={css.links}>
-      <AppLink to={'/'}>Home</AppLink>
-      <AppLink to={'/about'}>About</AppLink>
-    </div>
-    <ThemeSwitcher/>
-  </nav>
-)
+export const Navbar = () => {
+  const { t } = useTranslation()
+
+  return (
+    <nav className={css.navbar}>
+      <div className={css.item}>
+        <AppLink to={'/'}>{t('HomePage')}</AppLink>
+        <AppLink to={'/about'}>{t('AboutPage')}</AppLink>
+      </div>
+      <div className={css.item}>
+        <ThemeSwitcher/>
+      </div>
+      <div className={css.item}>
+        <LangSwitcher/>
+      </div>
+    </nav>
+  )
+}
