@@ -1,9 +1,10 @@
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 import { type BuildOptions } from './types/config'
-import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
 export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
   return [
@@ -22,5 +23,6 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
       overlay: false,
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin(),
   ]
 }
