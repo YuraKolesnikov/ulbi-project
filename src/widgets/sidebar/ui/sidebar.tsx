@@ -11,7 +11,7 @@ export const Sidebar: FC = () => {
   const onToggle = () => setCollapsed(prev => !prev)
 
   return (
-    <aside className={classNames(css.sidebar, collapsed && css.collapsed)}>
+    <aside data-testid="sidebar" className={classNames(css.sidebar, collapsed && css.collapsed)}>
       <Button onClick={onToggle}>{collapsed ? '>' : '<'}</Button>
     </aside>
   )
